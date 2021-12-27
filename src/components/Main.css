@@ -2,3 +2,24 @@ h1{
     color: darkgrey;
     font-weight: 700;
 }
+.div-img{
+    height: 12rem;
+    padding: 0.2rem;
+    overflow: hidden;
+}
+.div-img > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 7%;  
+    object-fit: cover;
+    object-position: top;
+}
+.card_person{
+    background-color: rgba(0, 0, 0, 0.411);
+    color: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+#t-m{
+    font-weight: 700;
+}
