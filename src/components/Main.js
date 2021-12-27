@@ -12,6 +12,10 @@ const Main = () => {
     const rechargeAll = ()=>{
         setPerson(meets);
     }
+    const deletePerson = (id)=>{
+        let deleteEl = person.filter(el => el.id !== id)
+        setPerson(deleteEl);
+    }
 
     return (
         <div className='row text-center'>
@@ -34,7 +38,7 @@ const Main = () => {
                                             <p>{phrase}</p>
                                         </div>
                                         <div className="col-12 col-md-2 p-3">
-                                            <button className='btn btn-danger px-4'>X</button>
+                                            <button onClick={()=> deletePerson(id)} className='btn btn-danger px-4'>X</button>
                                         </div>
                                     </div>
                                 </div>
