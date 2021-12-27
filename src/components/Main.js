@@ -5,6 +5,14 @@ import { meets } from '../data/data'
 const Main = () => {
     const [person, setPerson] = useState(meets);
 
+    const deleteAll = ()=>{
+        let cancelAll = [];
+        setPerson(cancelAll);
+    }
+    const rechargeAll = ()=>{
+        setPerson(meets);
+    }
+
     return (
         <div className='row text-center'>
             <div className="col-12">
@@ -34,6 +42,10 @@ const Main = () => {
                         })
                     }
                 </div>
+            </div>
+            <div className="col-12 d-flex justify-content-between align-item-center p-4">
+                <button onClick={rechargeAll} className='btn btn-primary'>RICARICA</button>
+                <button onClick={deleteAll} className='btn btn-danger'>CANCELLA TUTTI</button>
             </div>
         </div>
     )
